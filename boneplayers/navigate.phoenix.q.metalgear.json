@@ -1,0 +1,53 @@
+{
+ "name"         : "Search [COLOR FF0084FF]-[/COLOR] Phoenix ",
+ "repository"   : "repository.xbmchub",
+ "plugin"       : "plugin.video.phstreams",
+ "priority"     : 800,
+ "id"           : "Search.phoenix.q",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [],
+ "tvshows"      : [],
+ "musicvideos"  : [],
+ "music"        : [],
+ "live"         : [
+  [
+   {
+    "link": "plugin://plugin.video.phstreams/",
+    "steps": [
+     ".*tv.*",
+     "@anyexcept:Events|Shows|Radio",
+     "({name}|{name|replace(*, star)})"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link": "plugin://plugin.video.phstreams/",
+    "steps": [
+     ".*tv.*",
+     "@anyexcept:Events|Shows|Radio",
+     ".*({name}|{name|replace(*, star)}).*"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link": "plugin://plugin.video.phstreams/",
+    "steps": [
+     ".*tv.*",
+     "@anyexcept:Events|Shows|Radio",
+     "({basename}|{basename|replace(*, star)}).({extension}|{extension|number_to_text()}|{extension|text_to_number()})"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link": "plugin://plugin.video.phstreams/",
+    "steps": [
+     ".*tv.*",
+     "@anyexcept:Events|Shows|Radio",
+     ".*({basename}|{basename|replace(*, star)}).({extension}|{extension|number_to_text()}|{extension|text_to_number()}).*"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ]
+}

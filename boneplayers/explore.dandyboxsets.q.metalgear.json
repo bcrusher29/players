@@ -1,0 +1,33 @@
+{
+ "name"         : "Search [COLOR ff0084ff]-[/COLOR] DandyMedia Boxsets ",
+ "repository"   : "repository.dandymedia",
+ "plugin"       : "plugin.video.dandyboxset",
+ "priority"     : 700,
+ "id"           : "Search.dandyboxset.q",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [
+  [
+   {
+    "link"      : "plugin://plugin.video.dandyboxset/",
+    "steps"     : [
+     "><Just Great Movies",
+     "><{title}.*{year}."
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.dandyboxset/",
+    "steps"     : [
+     "@any",
+     "><{title}.*{year}."
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "tvshows"      : [],
+ "musicvideos"  : [],
+ "music"        : [],
+ "live"         : []
+}

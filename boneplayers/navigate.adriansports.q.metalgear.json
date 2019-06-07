@@ -1,0 +1,49 @@
+{
+ "name"         : "Search [COLOR FF0084FF]-[/COLOR] ADRIAN SPORTS ",
+ "repository"   : "repository.adriansports",
+ "plugin"       : "plugin.video.adriansports",
+ "priority"     : 800,
+ "id"           : "Search.adriansports.q",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [],
+ "tvshows"      : [],
+ "musicvideos"  : [],
+ "music"        : [],
+ "live"         : [
+  [
+   {
+    "link"      : "plugin://plugin.video.adriansports/",
+    "steps"     : [
+     ".*list.*",
+     "{name}"
+    ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.adriansports/",
+    "steps"     : [
+     ".*list.*",
+     ".*{name}.*"
+    ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.adriansports/",
+    "steps"     : [
+     ".*list.*",
+     "{basename}.({extension}|{extension|number_to_text()}|{extension|text_to_number()})"
+    ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.adriansports/",
+    "steps"     : [
+     ".*list.*",
+     ".*{basename}.({extension}|{extension|number_to_text()}|{extension|text_to_number()}).*"
+    ],
+    "action"    : "PLAY"
+   }
+  ]
+ ]
+}

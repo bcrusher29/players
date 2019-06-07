@@ -1,0 +1,30 @@
+{
+ "name"         : "Search [COLOR FF0084FF]-[/COLOR] Elementum ",
+ "repository"   : "repository.unofficialelementum",
+ "plugin"       : "plugin.video.elementum",
+ "priority"     : 200,
+ "id"           : "Elementum",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [
+  [
+   {
+    "link"      : "plugin://plugin.video.elementum/library/play/movie/{tmdb}",
+    "steps"     : [],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "tvshows"      : [
+  [
+   {
+    "link"      : "plugin://plugin.video.elementum/library/play/show/{tmdb}/season/{season}/episode/{episode}",
+    "steps"     : [],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "musicvideos"  : [],
+ "music"        : [],
+ "live"         : []
+}
